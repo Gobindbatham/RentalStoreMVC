@@ -1,0 +1,24 @@
+﻿@model IEnumerable<RentalStore.Models.book>
+
+@{
+    ViewData["Title"] = "bookView";
+}
+
+
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4">
+                <h1 class="text-capitalize">@Html.DisplayFor(modelItem => item.BName)</h1>
+                <img src="http://pngimg.com/uploads/book/book_PNG2111.png" class="card-img-top"/>
+                <p>@Html.DisplayFor(modelItem => item.Subject)</p>
+                <a href="@Url.Action("Create","Rentals")" class="btn btn-warning">Book Now</a>
+            </div>
+        }
+
+        </div>
+
+</div>
+
+       
